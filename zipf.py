@@ -60,20 +60,3 @@ def generate_text(subset=8, text_len=1000000, approx_word_len=5, log=True):
     for i in range(int(subset/approx_word_len)):
         chars.append(' ')               # add the number of spaces required to maintain an approx. word length (specified)
     zipf(''.join(random.choice(chars) for _ in range(text_len)).split(' '),'Randomly-Generated String, avg word len='+str(approx_word_len), new_figure='True', log=log)
-    
-# -----------------------------------------------------------------------------
-# Main Execution
-# -----------------------------------------------------------------------------
-def main():
-    # call zipf for natural language sample(s)
-    zipf(text1, "Moby Dick")         
-    zipf(text2, "Sense and Sensibility")        
-    zipf(text3,"The Book of Genesis")        
-    zipf(text4, "Inaugural Address Corpus")         
-    zipf(text5, "Sample Chat Corpus")         
-    # call zipf for random language sample(s)
-    generate_text(approx_word_len=6)
-    
-if __name__ == "__main__":
-    main()
-

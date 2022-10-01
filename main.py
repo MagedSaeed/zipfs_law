@@ -1,4 +1,6 @@
+from nltk.book import *
 from .zipf import *
+
 def main():
     # call zipf for natural language sample(s)
     zipf(text1, "Moby Dick")         

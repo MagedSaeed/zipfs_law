@@ -10,7 +10,6 @@ Last Updated: Sun Jun 21 2020
 # for analysis and discussion, see "README.md"
 
 import pylab
-from nltk.book import *
 from nltk.probability import FreqDist
 import random
 import string

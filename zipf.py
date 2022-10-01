@@ -38,7 +38,11 @@ def zipf(text, name, new_figure=False, log=True):
     # add axis labels, title, and legend
     pylab.xlabel('Rank')
     pylab.ylabel('Frequency')
-    pylab.title('Logorithmic Frequency vs Rank for Words in a Text')
+    if log:
+        pylab.title('Logarithmic Frequency vs Rank for Words in a Text')
+    else:
+        pylab.title('Frequency vs Rank for Words in a Text')
+        
     pylab.legend(loc='upper right')
   
     
